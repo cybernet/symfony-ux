@@ -15,7 +15,6 @@ features than fetch.
 
 Your second option is to "polyfill" `fetch()` so it works in all browsers. Github
 itself maintains a [polyfill for fetch](https://github.com/github/fetch).
-
 It's pretty simply to set up: `yarn add whatwg-fetch` then, in `webpack.config.js`,
 adapt your main entry to include it first:
 
@@ -32,7 +31,7 @@ Encore
 
 *Anyways*, let's make the AJAX call!
 
-We need to do send 2 query parameters on the AJAX request: the value of
+We need to send 2 query parameters on the AJAX request: the value of
 the search box as a `q` query parameter and another one called `preview` so that
 our controller knows to render the preview HTML.
 

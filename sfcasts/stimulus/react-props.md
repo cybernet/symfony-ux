@@ -23,7 +23,7 @@ To render this, let's create a new stimulus controller called, how about,
 `made-with-love_controller.js`, paste here, and then change the import to
 `FeaturedProduct` from `FeaturedProduct`. Render `<FeaturedProduct />` below.
 
-[[[ code('83ebbff441') ]]]
+[[[ code('2d06667e62') ]]]
 
 Super simple. The interesting part about this React component is that it requires
 a `product` prop, which is the data for whatever the featured product is. If we
@@ -44,7 +44,7 @@ object. So in our Stimulus controller, add a `static values` set to an object
 with a `product` key set to `Object`. We can pass this product value into the
 component as a prop: `product={this.productValue}`.
 
-[[[ code('f32ed7257d') ]]]
+[[[ code('4cc4f3b568') ]]]
 
 Beautiful. Now open the template for this page, which is
 `templates/registration/register.html.twig`. Above the `h1`, add a new div with
@@ -86,6 +86,8 @@ up the `Product` class: `src/Entity/Product.php`. I already have Symfony's
 serializer component installed in my app... and I've already added some
 serialization groups to this class to control exactly *which* fields are turned
 into JSON: that's this `product:read` group.
+
+[[[ code('9efd077244') ]]]
 
 The only missing piece is that... well.. there isn't a way in Twig to *use*
 Symfony's serializer to transform an object into JSON. So... I built one. You can

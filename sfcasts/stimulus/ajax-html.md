@@ -37,7 +37,7 @@ Then `{% for product in products %}` and `{% endfor %}`.
 Inside, I want each result to be a link. Add an `a` with `href=""` `{{ path() }}`
 and the name of the route to the product page, which is `app_product`. This route
 has an `id` wildcard. So pass `id` set to `product.id`. I'm also going to add a
-few more classes for styling... then inside the a, start with the simple
+few more classes for styling... then inside the `a`, start with the simple
 `{{ product.name }}`.
 
 Oh, and to be *extra* fancy, add an `{% else %}`. If there are no results, render
@@ -53,7 +53,7 @@ Variable `products` does not exist. Because... in the controller, I forgot my "s
 Now... much better. I mean, it looks terrible *here*, but that's just because this
 page doesn't have any CSS. Head back to the homepage.
 
-## Adding the AJAX HTML to the a Target
+## Adding the AJAX HTML to the Target
 
 The last step in Stimulus is to dump the HTML from the AJAX endpoint onto the page.
 To control exactly where it goes, let's add a new target element. In
